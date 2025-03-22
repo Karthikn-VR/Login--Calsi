@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 300px;
+            height: 250px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 500px;
+            margin-top: 70px;
+            padding: 20px;
+            background-color: rgb(252, 252, 252);
+            color: rgb(10, 10, 10);
+            border-radius: 10px;
+            box-shadow: 10px 10px;
+            border: 1px solid;
+            border-color:  black;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            color: black;
+            font-size: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 50%;
+            height: 30px;
+            margin-left: 75px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <h2>Login Form</h2>
+        <div class="inputs">
+            Username<input type="text" placeholder="Username" id="name">
+            Password <input type="password" placeholder="password" id="pass">
+            <button onclick="submit()">Submit</button>
+        </div>
+    </div>
+    <script>
+        function submit() {
+            const name = document.getElementById("name").value;
+            const pass = document.getElementById("pass").value;
+            if (name == 'karthi' && pass == '1234') {
+                window.open("calsi.html");
+            }
+            else{
+                alert("error enter karthi passsword 1234")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

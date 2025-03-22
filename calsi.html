@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .container {
+            width: 250px;
+            padding: 15px;
+            margin: 50px auto;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .display input {
+            width: 80%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .buttons input {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            background: #555;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .buttons input:hover {
+            background: #333;
+        }
+        
+        .buttons input[value="="] {
+            grid-column: span 2;
+            background: #e74c3c;
+        }
+        
+        .buttons input[value="="]:hover {
+            background: #c0392b;
+        }
+        
+        .buttons input[value="AC"] {
+            background: #e67e22;
+        }
+        
+        .buttons input[value="AC"]:hover {
+            background: #d35400;
+        }
+        
+    
+    
+    </style>
+    <form>
+        
+<div class="container">
+    <div class="display">
+        <input type="text"  name="display"><br><br>
+    </div>
+
+    <div class="buttons">
+        <input type="button" value="AC" onclick ="display.value = ''">
+        <input type="button" value="1" onclick ="display.value += '1'">
+        <input type="button" value="2" onclick ="display.value += '2'">
+        <input type="button" value="3" onclick ="display.value += '3'">
+        <input type="button" value="+" onclick ="display.value += '+'">
+        <input type="button" value="6" onclick ="display.value += '6'">
+        <input type="button" value="5" onclick ="display.value += '5'">
+        <input type="button" value="4" onclick ="display.value += '4'">
+        <input type="button" value="-" onclick ="display.value += '-'">
+        <input type="button" value="9" onclick ="display.value += '7'">
+        <input type="button" value="8" onclick ="display.value += '8'">
+        <input type="button" value="7" onclick ="display.value += '9'">
+        <input type="button" value="*" onclick ="display.value += '*'">
+        <input type="button" value="/" onclick ="display.value += '/'">
+        <input type="button" style="width: 80px;" value = "="onclick ="display.value = eval(display.value)">
+    </div>
+ </div>
+   </form>         
+</body>
+</html>
